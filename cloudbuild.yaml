@@ -11,7 +11,7 @@ steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['app', 'deploy']
     env:
-      - 'CLOUDSDK_APP_DEPLOY_IMAGE_URL=gcr.io/$PROJECT_ID/my-node-app']
+      - 'CLOUDSDK_APP_DEPLOY_IMAGE_URL=gcr.io/$PROJECT_ID/my-node-app'
 
 options:
   logging: CLOUD_LOGGING_ONLY
