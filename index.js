@@ -80,7 +80,7 @@ app.post("/webhook", async (req, res) => { //i want some
                 console.log("boady param " + msg_body);
                 axios({
                     method: "POST",
-                    url: "https://graph.facebook.com/v18.0/296604976862397/messages",
+                    url: "https://graph.facebook.com/v19.0/296604976862397/messages",
                     data: {
                         messaging_product: "whatsapp",
                         to: "966580701918",
@@ -106,5 +106,5 @@ app.post("/webhook", async (req, res) => { //i want some
 });
 
 app.get("/", (req, res) => {
-    res.status(200).send("hello this is webhook setup");
+    res.status(200).send("hello this is webhook setup " + process.env.TOKEN);
 });
