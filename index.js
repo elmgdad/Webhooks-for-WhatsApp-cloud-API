@@ -90,7 +90,7 @@ app.post("/webhook", async (req, res) => { //i want some
                     },
                     headers: {
                         "Content-Type": "application/json",
-                        'Authorization': 'Bearer ' + mytoken
+                        'Authorization': 'Bearer ' + token
                     }
 
                 });
@@ -106,5 +106,5 @@ app.post("/webhook", async (req, res) => { //i want some
 });
 
 app.get("/", (req, res) => {
-    res.status(200).send("hello this is webhook setup " + process.env.TOKEN);
+    res.status(200).send("hello this is webhook setup " + mytoken);
 });
